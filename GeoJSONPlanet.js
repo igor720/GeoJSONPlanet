@@ -406,9 +406,6 @@ function drawGeoJSON(json, subsFtOptsArr) {
 	return ctx;
 }
 
-	return ctx;
-}; // PlanetView
-
 // In the next three functions: 'phi' is longitude, 'theta' is latitude
 
 // Get arc distance between two points on sphere as the length
@@ -480,3 +477,7 @@ function zipOpts(arr1, arr2, el) {
 	}
 	return zip(arr1, arr2);
 }
+
+	return ctx;
+}; // PlanetView
+
