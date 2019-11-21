@@ -121,7 +121,7 @@ Example:
 }
 ```
 
-### More Info
+## More Info
 
 See [the tutorial](http://forgedmaps.com/tutorials/creating-planet-model-with-geojsonplanet/) for more information.
 
