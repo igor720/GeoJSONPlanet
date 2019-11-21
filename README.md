@@ -7,34 +7,34 @@ Requires a [ThreeJS 3D library](http://threejs.org/) for its work.
 ### Constructor
 
 ```javascript
-GeoJSONPlanet( texture, canvasDOMId, opts ),
+GeoJSONPlanet(texture, canvasDOMId, opts),
 ```
 
-`texture` is some image, it is assumed that it is a map of the planet
-    in a equirectangular projection; texture will be superimposed on the sphere surface.
+`texture` is some image, it is assumed that it is a planetary map 
+    in the equirectangular projection; `texture` will be superimposed on the sphere surface.
 
 Here are all current possible members of `opts` object.
 
-`width` : width of canvas (default: `canvas.clientWidth`),
-`height`: height of canvas (default: `canvas.clientHeights`),
-`background` : background color (default: `‘0x000000’`),
-`enableZoom` : enable a user to zoom camera (default: `true`),
-`cam.fov` : camera field of view (default: `42`),
-`cam.near` : camera near limiter (default: `0.1`),
-`cam.far` : camera far limiter (default: `2.7`),
-`cam.zPos` : camera z position (default: `3`),
-`sphereWidthSegs` : SphereGeometry widthSegments parameter (default: `80`),
-`sphereHeightSegs` : SphereGeometry heightSegments parameter (default: `60`),
-`oceanColor` : color of the ocean sphere (default: `‘0xaaaaaa’`),
-`textureFilter` : minFilter value for the planet sphere texture
+- `width` : width of canvas (default: `canvas.clientWidth`),
+- `height`: height of canvas (default: `canvas.clientHeights`),
+- `background` : background color (default: `‘0x000000’`),
+- `enableZoom` : enable a user to zoom camera (default: `true`),
+- `cam.fov` : camera field of view (default: `42`),
+- `cam.near` : camera near limiter (default: `0.1`),
+- `cam.far` : camera far limiter (default: `2.7`),
+- `cam.zPos` : camera z position (default: `3`),
+- `sphereWidthSegs` : SphereGeometry widthSegments parameter (default: `80`),
+- `sphereHeightSegs` : SphereGeometry heightSegments parameter (default: `60`),
+- `oceanColor` : color of the ocean sphere (default: `‘0xaaaaaa’`),
+- `textureFilter` : minFilter value for the planet sphere texture
 (default: `THREE.NearestMipmapNearestFilter`),
-`axisColor` : color of the rotation axis (default: `‘0xffffff’`),
-`axisAngle` : angle of the rotation axis (default: `0`,
+- `axisColor` : color of the rotation axis (default: `‘0xffffff’`),
+- `axisAngle` : angle of the rotation axis (default: `0`,
 currently angle can be only in XY plane),
-`dMin` : minimum distance (grad) between nodes of various string
+- `dMin` : minimum distance (grad) between nodes of various string
 dependent geometries; if specified then the special precedure supplements
 strings with additional nodes (default: `null`),
-`dFuncN` : if `dMin` is specified the special function can provide additional
+- `dFuncN` : if `dMin` is specified the special function can provide additional
 nodes; that function uses method specified by `dFuncN` option
 for defining distance between two points on the sphere
 (1: the fastest, but inaccurate; 2: more slowly, but accurate for close points; 3: exact, but the slowest;
@@ -83,7 +83,7 @@ const subsFtOptsArr = [
 ```
 
 Alternative or complementary approach involves setting the *style* directly
-in the json structure for each *Feature*.
+in the GeoJSON structure for each *Feature*.
 
 Example:
 ```javascript
@@ -120,6 +120,8 @@ Example:
     }]
 }
 ```
+
+### More Info
 
 See [the tutorial](http://forgedmaps.com/tutorials/creating-planet-model-with-geojsonplanet/) for more information.
 
